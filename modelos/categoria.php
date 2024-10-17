@@ -59,19 +59,6 @@ class Categoria{
 		$sql="SELECT * FROM categoria where condicion=1";
 		return ejecutarConsulta($sql);		
 	}
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
 
 ?>

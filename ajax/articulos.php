@@ -1,7 +1,7 @@
 <?php 
 require_once "../modelos/articulos.php";
 
-$articulo=new Articulo();
+$persona=new Articulo();
 
 $idarticulo=isset($_POST["idarticulo"])? limpiarCadena($_POST["idarticulo"]):"";
 $idcategoria=isset($_POST["idcategoria"])? limpiarCadena($_POST["idcategoria"]):"";
@@ -29,36 +29,36 @@ switch ($_GET["op"]){
 		}
         
 		if (empty($idarticulo)){
-			$rspta=$articulo->insertar($idcategoria,$codigo,$nombre,$stock,$descripcion,$imagen);
+			$rspta=$persona->insertar($idcategoria,$codigo,$nombre,$stock,$descripcion,$imagen);
 			echo $rspta ? "Artículo registrado" : "Artículo no se pudo registrar";
 		}
 		else {
-			$rspta=$articulo->editar($idarticulo,$idcategoria,$codigo,$nombre,$stock,$descripcion,$imagen);
+			$rspta=$persona->editar($idarticulo,$idcategoria,$codigo,$nombre,$stock,$descripcion,$imagen);
 			echo $rspta ? "Artículo actualizado" : "Artículo no se pudo actualizar";
 		}
 	break;
 
 	case 'desactivar':
-		$rspta=$articulo->desactivar($idarticulo);
+		$rspta=$persona->desactivar($idarticulo);
  		echo $rspta ? "Artículo Desactivado" : "Artículo no se puede desactivar";
  		break;
 	break;
 
 	case 'activar':
-		$rspta=$articulo->activar($idarticulo);
+		$rspta=$persona->activar($idarticulo);
  		echo $rspta ? "Artículo activado" : "Artículo no se puede activar";
  		break;
 	break;
 
 	case 'mostrar':
-		$rspta=$articulo->mostrar($idarticulo);
+		$rspta=$persona->mostrar($idarticulo);
  		//Codificar el resultado utilizando json
  		echo json_encode($rspta);
  		break;
 	break;
 
 	case 'listar':
-		$rspta=$articulo->listar();
+		$rspta=$persona->listar();
  		//Vamos a declarar un array
  		$data= Array();
 
