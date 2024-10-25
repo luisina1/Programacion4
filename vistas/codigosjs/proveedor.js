@@ -1,7 +1,10 @@
 var tabla;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 0a794bff02d08bdf9f59ebd136a6dd6cf2c21eb2
 function init() {
 
     mostrarelformulario(false);
@@ -11,6 +14,7 @@ function init() {
     $("#formulario").on("submit", function (e) {
         
         guardaryeditar(e);
+<<<<<<< HEAD
     })
 
   
@@ -29,6 +33,18 @@ function limpiar() {
 	$("#email").val("");
 	$("#idpersona").val("");
     
+=======
+    })   
+}
+
+function limpiar() {
+  	$("#nombre").val("");
+	$("#num_documento").val("");
+	$("#direccion").val("");
+	$("#telefono").val("");
+	$("#email").attr("src","");
+	$("#idpersona").val("");
+>>>>>>> 0a794bff02d08bdf9f59ebd136a6dd6cf2c21eb2
 }
 
 
@@ -52,7 +68,10 @@ function mostrarelformulario(x) {
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0a794bff02d08bdf9f59ebd136a6dd6cf2c21eb2
 function cancelarformulario() {
 
     limpiar();
@@ -135,6 +154,7 @@ function mostrar(idpersona) {
         data = JSON.parse(data);
         mostrarelformulario(true);
 
+<<<<<<< HEAD
     	$("#nombre").val(data.nombre);
 		$("#tipo_documento").val(data.tipo_documento);
 		//$("#tipo_documento").selectpicker('refresh');
@@ -149,12 +169,28 @@ function mostrar(idpersona) {
         
         } )
     
+=======
+        $("#nombre").val(data.nombre);
+        $("#tipo_documento").val(data.tipo_documento);
+        //$('#tipo_documento').selectpicker('refresh');
+        $("#num_documento").val(data.num_documento);
+        $("#direccion").val(data.direccion);
+		$("#telefono").val(data.telefono);
+        $("#email").val(data.email);
+        $("#idpersona").val(data.idpersona);    
+        
+        } )
+>>>>>>> 0a794bff02d08bdf9f59ebd136a6dd6cf2c21eb2
 }
 
 
 function eliminar(idpersona) {
 
+<<<<<<< HEAD
     bootbox.confirm("¿Está Seguro de eliminar al proveedor?", function (result) {
+=======
+    bootbox.confirm("¿Está seguro de eliminar al Proveedor?", function (result) {
+>>>>>>> 0a794bff02d08bdf9f59ebd136a6dd6cf2c21eb2
 
         if (result) {
 
@@ -170,7 +206,11 @@ function eliminar(idpersona) {
 
 }
 
+<<<<<<< HEAD
 
 
 
 init();
+=======
+init();
+>>>>>>> 0a794bff02d08bdf9f59ebd136a6dd6cf2c21eb2

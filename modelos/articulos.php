@@ -1,5 +1,9 @@
 <?php 
+<<<<<<< HEAD
 //Incluímos inicialmente la conexión a la base de datos
+=======
+
+>>>>>>> 0a794bff02d08bdf9f59ebd136a6dd6cf2c21eb2
 require "../configuracion/Conexion.php";
 
 Class Articulo
@@ -43,7 +47,11 @@ Class Articulo
 	public function mostrar($idarticulo)
 	{
 		$sql="SELECT * FROM articulo WHERE idarticulo='$idarticulo'";
+<<<<<<< HEAD
 		return ejecutarConsultaSimpleFila($sql);
+=======
+		return ejecutarConsultaUnica($sql);
+>>>>>>> 0a794bff02d08bdf9f59ebd136a6dd6cf2c21eb2
 	}
 
 	//Implementar un método para listar los registros

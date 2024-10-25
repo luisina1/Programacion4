@@ -12,8 +12,11 @@ $nombre=isset($_POST["nombre"])? limpiarCadena($_POST["nombre"]):"";
 $descripcion=isset($_POST["descripcion"])? limpiarCadena($_POST["descripcion"]):"";
 
 
+<<<<<<< HEAD
 //localhost. com?op=desactivar
 
+=======
+>>>>>>> 0a794bff02d08bdf9f59ebd136a6dd6cf2c21eb2
 switch($_GET["op"]){
     case 'guardareditar':
 

@@ -59,6 +59,7 @@ class Categoria{
 		$sql="SELECT * FROM categoria where condicion=1";
 		return ejecutarConsulta($sql);		
 	}
+<<<<<<< HEAD
 
 
 
@@ -74,4 +75,8 @@ class Categoria{
 
 
 
+=======
+}
+
+>>>>>>> 0a794bff02d08bdf9f59ebd136a6dd6cf2c21eb2
 ?>
